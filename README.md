@@ -1,7 +1,8 @@
-# improving-data-visualisation
+# Improving data visualisation
 
+A common problem for Finance is how to visualise I&E data. This is a challenge for many reasons - lots of data, wanting compare year-on-year movements while still clearly showing the composition of each year's I&E, granularity versus readability. 
 
-I can't share internal data, so I've picked a similar type of chart and shown how I would improve it. Here's one that shows the revenue sources for the Canadian National Broadcasting Corporation for two years.
+I can't share internal data from my work, so I've picked a similar type of chart and shown how I would improve it. Here's one that shows the revenue sources for the Canadian National Broadcasting Corporation for two years.
 
 ## What are the problems with this chart?
 
