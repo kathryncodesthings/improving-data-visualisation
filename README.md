@@ -3,7 +3,7 @@
 
 I can't share internal data, so I've picked a similar type of chart and shown how I would improve it. Here's one that shows the revenue sources for the Canadian National Broadcasting Corporation for two years.
 
-# What are the problems with this chart?
+## What are the problems with this chart?
 
 The whole image is confusing. You might think at a glance that this is showing **three different** revenue categories, one totalling $1.7bn, one totalling $490m, and one totalling $248m. But it isn't! The leftmost column ($1.7bn) is for **all** revenue, and the next two columns break down that revenue further. This isn't how most cluster bar charts work, making it difficult for data users to interpret. At worst, it could mislead data users.
 
@@ -17,7 +17,7 @@ There are also some smaller problems which could be cleaned up:
 * Needing to look back and forth to the key to get the data category isn't ideal.
 * It's also not easy to compare categories year-on-year quickly. This takes more time, and it's easy for users to make a mistake.
 
-# Revision 1
+## Revision 1
 I created this in Power BI and made the following improvements:
 * Added a clear headline to give data users a quick takeaway, highlighting the most significant information in the graphic
 * Removed the confusing multiple columns, combining all revenue streams into one column per year
@@ -34,4 +34,4 @@ I could add a label manually in a a pop-out box to solve the first problem. I co
 
 I decided to try a different solution: a slope graph.
 
-# Revision 2
+## Revision 2
