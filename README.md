@@ -4,6 +4,8 @@ A common problem for Finance is how to visualise I&E data. This is a challenge f
 
 I can't share internal data from my work, so I've picked a similar type of chart and shown how I would improve it. Here's one that shows the revenue sources for the Canadian National Broadcasting Corporation for two years.
 
+![Bar chart showing revenue sources for the Canadian National Broadcasting Corporation for two years](https://github.com/kathryncodesthings/improving-data-visualisation/blob/main/original.png)
+
 ## What are the problems with this chart?
 
 The whole image is confusing. You might think at a glance that this is showing **three different** revenue categories, one totalling $1.7bn, one totalling $490m, and one totalling $248m. But it isn't! The leftmost column ($1.7bn) is for **all** revenue, and the next two columns break down that revenue further. This isn't how most cluster bar charts work, making it difficult for data users to interpret. At worst, it could mislead data users.
@@ -18,7 +20,10 @@ There are also some smaller problems which could be cleaned up:
 * Needing to look back and forth to the key to get the data category isn't ideal.
 * It's also not easy to compare categories year-on-year quickly. This takes more time, and it's easy for users to make a mistake.
 
-## Revision 1
+## Revision 1: Stacked bar chart
+
+![Bar chart showing revenue sources for the Canadian National Broadcasting Corporation for two years](https://github.com/kathryncodesthings/improving-data-visualisation/blob/main/Improved%20viz%201.png)
+
 I created this in Power BI and made the following improvements:
 * Added a clear headline to give data users a quick takeaway, highlighting the most significant information in the graphic
 * Removed the confusing multiple columns, combining all revenue streams into one column per year
@@ -35,4 +40,27 @@ I could add a label manually in a a pop-out box to solve the first problem. I co
 
 I decided to try a different solution: a slope graph.
 
-## Revision 2
+## Revision 2: Slope graph
+
+![Bar chart showing revenue sources for the Canadian National Broadcasting Corporation for two years](https://github.com/kathryncodesthings/improving-data-visualisation/blob/main/Improved%20viz%202.png)
+
+This was built in the web service Flourish. 
+
+I had the same problem that the creator of the original graph had: the largest revenue source is so far above the others that it leaves a lot of white space in the middle of the visual. 
+
+Additionally, there are two categories that are so close in value together that they have to overlap at the bottom of the graph.
+
+While this does successfully show the movement year-on-year more clearly, it's not suitable.
+
+## Revision 3: horizontal clustered bar chart
+
+![Bar chart showing revenue sources for the Canadian National Broadcasting Corporation for two years](https://github.com/kathryncodesthings/improving-data-visualisation/blob/main/Improved%20viz%203.png)
+
+This was built in the web service Flourish. 
+
+This was my favourite of the three revisions. This layout compares the year-on-year movements and the overall composition of the revenue. There is some loss of information (it doesn't show all revenue as one datapoint, as it's been split into bars). However, I think this is the best compromise for illustrating the makeup of the revenue while comparing the year-on-year changes.
+
+It also draws out the important message that the main reason for the decline in revenue is a decline in advertising revenue, something that wasn't as obvious from the other visualisations.
+
+## Conclusions
+Depending on what the company wants to communicate to its data users, different visuals will be suitable. It might be ideal to have a pullquote highlighting 'Revenue decreased xx%' to promote the overall movement, and have the third visualisation to show more detail. There's always some compromise necessary, however this version of the chart shows the key data clearly, in a format that data users can quickly absorb and understand.
