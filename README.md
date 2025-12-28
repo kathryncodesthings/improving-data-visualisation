@@ -13,7 +13,7 @@ The y axis isn't continuous. There's a jump between $700m and $1.7bn so that the
 
 There are also some smaller problems which could be cleaned up:
 * The y axis could be removed as all the data points are labelled. This could reduce some of the visual clutter.
-* The order of the years is back-to-front from how most data users would expect. Although new -> old is normal for financial statements, data users would expect to see old -> new when looking at information.
+* The order of the years is back-to-front from what most data users would expect. Although new -> old is customary for financial statements, data users would expect to see old -> new when looking at time series data visualisation.
 * Needing to look back and forth to the key to get the data category isn't ideal.
 * It's also not easy to compare categories year-on-year quickly. This takes more time, and it's easy for users to make a mistake.
 
