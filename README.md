@@ -70,7 +70,9 @@ While this does successfully show the movement year-on-year more clearly, it's n
 
 This was built in the web service Flourish. 
 
-This was my favourite of the three revisions. This layout compares the year-on-year movements and the overall composition of the revenue. There is some loss of information (it doesn't show all revenue as one datapoint, as it's been split into bars). However, I think this is the best compromise for illustrating the makeup of the revenue while comparing the year-on-year changes.
+This was my favourite of the three revisions. This layout compares the year-on-year movements and the overall composition of the revenue. There is some loss of information (it doesn't show total revenue, as it's been split into bars). However, I think this is the best compromise for illustrating the makeup of the revenue while comparing the year-on-year changes.
+
+The horizontal format minimises the problem of wasted space due to the large outlying category, and is easy for data users to read as it's in the same left to right format as most written English text.
 
 There are some small tweaks made to improve the visualisation:
 * Shading the previous year paler and the most recent year darker, to focus attention on the most recent year
