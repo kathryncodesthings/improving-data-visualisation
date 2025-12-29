@@ -8,79 +8,109 @@ Where relevant, I include links to the full analysis and code.
 
 ## Improving data visualisation
 
-Skills demonstrated: data visualisation; communicating insights to non-technical audiences.
+Skills demonstrated: data visualisation; analytical judgement; communicating insights to non-technical audiences; translating complex data into clear narratives.
+
+![Bar chart showing revenue sources for the Canadian National Broadcasting Corporation for two years](https://github.com/kathryncodesthings/improving-data-visualisation/blob/main/original%20to%20improved.png)
 
 ### Business question
 
-A common problem for Finance is how to visualise I&E data. This is a challenge for many reasons - lots of data, wanting compare year-on-year movements while still clearly showing the composition of each year's I&E, granularity versus readability. 
+Finance teams often struggle to visualise income and expenditure data in a way that is:
+* Clear and intuitive for non-financial audiences
+* Able to show both year-on-year change and overall composition
+* Detailed enough to be accurate, without overwhelming the reader
 
-I can't share internal data from my work, so I've picked a similar type of chart and shown how I would improve it. Here's one that shows the revenue sources for the Canadian National Broadcasting Corporation for two years.
+This is a common problem across many sectors, not just higher education.
 
-![Bar chart showing revenue sources for the Canadian National Broadcasting Corporation for two years](https://github.com/kathryncodesthings/improving-data-visualisation/blob/main/original.png)
+As I can't share internal data from my role, I used a publicly available example showing revenue sources for CBC-Radio Canada across two years, and demonstrated how I would improve the visual communication.
+
+![Bar chart showing revenue sources for CBC-Radio Canada for two years](https://github.com/kathryncodesthings/improving-data-visualisation/blob/main/original.png)
+
+> Source: CBC-Radio Canada 2018-2019 Annual Report ([PDF](https://site-cbc.radio-canada.ca/documents/impact-and-accountability/finances/2018-2019-annual-report.pdf)), page 39
 
 ### What are the problems with this chart?
 
-The whole image is confusing. You might think at a glance that this is showing **three different** revenue categories, one totalling $1.7bn, one totalling $490m, and one totalling $248m. But it isn't! The leftmost column ($1.7bn) is for **all** revenue, and the next two columns break down that revenue further. This isn't how most cluster bar charts work, making it difficult for data users to interpret. At worst, it could mislead data users.
+At first glance, the chart is confusing and difficult to interpret correctly. The layout appears to show three separate revenue totals ($1.7bn, $490m and $248m), when in fact:
+* The left-hand column represents total revenue
+* The two columns to the right break that total into components
 
-This leads to a puzzling label for the dark blue section of the first column: 'Revenue'. Isn't it all revenue?
+This is not how most grouped bar charts are structured, which makes the visual misleading and increases the risk of misinterpretation.
 
-The y axis isn't continuous. There's a jump between $700m and $1.7bn so that the leftmost 'total' revenue bar wouldn't completely overshadow the 'breakdown' bars. This means that the largest revenue bar is disproportionately smaller than it should be, which could - again - confuse and mislead data users. It makes the $1.2bn of Government revenue look smaller than the $490m in the next column, for example.
+The y axis isn't continuous. There's a jump between $700m and $1.7bn so that the leftmost 'total' revenue bar wouldn't  overshadow the 'breakdown' bars. This means that the largest revenue bar is disproportionately smaller than it should be, which could mislead data users. It makes the $1.2bn of Government revenue look smaller than the $490m in the next column, for example.
 
-There are also some smaller problems which could be cleaned up:
-* The y axis could be removed as all the data points are labelled. This could reduce some of the visual clutter.
-* The order of the years is back-to-front from what most data users would expect. Although new -> old is customary for financial statements, data users would expect to see old -> new when looking at time series data visualisation.
-* Needing to look back and forth to the key to get the data category isn't ideal.
-* It's also not easy to compare categories year-on-year quickly. This takes more time, and it's easy for users to make a mistake.
+There are also some smaller design issues:
+* The y axis could be removed as all the data points are labelled
+* The order of the years runs newest to oldest, which is counterintuitive for most time-based visuals
+* Needing to look back and forth to the key to get the data category isn't ideal
+* Year-on-year comparisons are slow and it's easy for users to make a mistake
+
+Overall, the chart demands too much effort from the reader and risks communicating the wrong message.
 
 ### Revision 1: Stacked bar chart
 
 ![Bar chart showing revenue sources for the Canadian National Broadcasting Corporation for two years](https://github.com/kathryncodesthings/improving-data-visualisation/blob/main/Improved%20viz%201.png)
 
-I created this in Power BI and made the following improvements:
-* Added a clear headline to give data users a quick takeaway, highlighting the most significant information in the graphic
-* Removed the confusing multiple columns, combining all revenue streams into one column per year
-* Swapped the year order so that data users can read it in a more familiar way (oldest to newest / left to right)
-* Put labels directly on the graph to make it easier to read (no need to look back and forth for colours/lables)
-* And I can therefore remove the unnecessary y axis, reducing visual clutter
+I recreated the chart in Power BI, focusing on clarity and reducing ambiguity.
 
-However, there are still some issues with the graph:
-* Most significantly, the smallest segment (digital advertising revenue) can't accomodate a label
-* Needing width for the widest labels means the columns have to be large, taking up a lot of space
-* To compare categories, data users still need to look back and forth between the two columns and mentally compare the two values for each category. 
+Key improvements:
+* Added a clear headline to communicate the main takeaway immediately
+* Used a single bar per year, stacking revenue sources to show composition clearly
+* Reordered the years from oldest to newest for intuitive reading
+* Placed labels directly on the bars to remove reliance on a legend
+* Removed the y-axis to reduce visual clutter
 
-I could add a label manually in a a pop-out box to solve the first problem. I could also adjust the label formatting and sizes.
+This version is clearer, but it still has limitations:
+* The smallest category (digital advertising) cannot comfortably display a label
+* Long labels force the bars to be wide, using space inefficiently
+* Comparing individual categories year-on-year still requires mental effort
 
-I decided to try a different solution: a slope graph.
+While these issues could be partially mitigated, I decided to explore a different visual approach: a slope graph.
 
 ### Revision 2: Slope graph
 
 ![Bar chart showing revenue sources for the Canadian National Broadcasting Corporation for two years](https://github.com/kathryncodesthings/improving-data-visualisation/blob/main/Improved%20viz%202.png)
 
-This was built in the web service Flourish. 
+This version was built using Flourish and focuses explicitly on change over time.
 
-I had the same problem that the creator of the original graph had: the largest revenue source is so far above the others that it leaves a lot of white space in the middle of the visual. 
+It makes year-on-year movement clearer, but introduces new problems:
+* One revenue source is so much larger than the others that it creates excessive white space
+* Two categories at the lower end overlap, reducing readability
+* The visual struggles to balance scale and legibility
 
-Additionally, there are two categories that are so close in value together that they have to overlap at the bottom of the graph.
-
-While this does successfully show the movement year-on-year more clearly, it's not suitable.
+Although slope graphs are powerful in the right context, this dataset isn’t well suited to the format.
 
 ### Revision 3: horizontal clustered bar chart
 
 ![Bar chart showing revenue sources for the Canadian National Broadcasting Corporation for two years](https://github.com/kathryncodesthings/improving-data-visualisation/blob/main/Improved%20viz%203.png)
 
-This was built in the web service Flourish. 
+This was also created in Flourish and is my preferred solution.
 
-This was my favourite of the three revisions. This layout compares the year-on-year movements and the overall composition of the revenue. There is some loss of information (it doesn't show total revenue, as it's been split into bars). However, I think this is the best compromise for illustrating the makeup of the revenue while comparing the year-on-year changes.
+This layout:
+* Makes year-on-year comparisons easy and fast
+* Still communicates the composition of revenue
+* Avoids distortion caused by very large outliers
+* Uses a left-to-right reading flow that feels natural to most users
 
-The horizontal format minimises the problem of wasted space due to the large outlying category, and is easy for data users to read as it's in the same left to right format as most written English text.
+There is a trade-off: total revenue is no longer shown explicitly. However, for most decision-making contexts, understanding what changed and why is more important than seeing the total figure.
 
-There are some small tweaks made to improve the visualisation:
-* Shading the previous year paler and the most recent year darker, to focus attention on the most recent year
-* Sorting the sources of revenue from largest to smallest also communicates to the data user which are the highest revenue sources
+Additional refinements:
+* The earlier year is shown in a lighter shade, drawing attention to the most recent data
+* Revenue sources are sorted from largest to smallest, reinforcing their relative importance
 
-It also draws out the important message that the main reason for the decline in revenue is a decline in advertising revenue, something that wasn't as obvious from the other visualisations.
+This version clearly highlights the key problem behind the revenue decline: a fall in advertising revenue. This was far less obvious in the original chart.
 
-If I  wanted to really draw attention to the advertising revenue decrease, for example if this was for a presentation, I would shade the advertising revenue bars a different, brighter colour.
+If this visual was being used in a presentation, I'd consider highlighting advertising revenue in a stronger colour to focus viewers' attention further.
 
 ## Conclusions
-Depending on what the company wants to communicate to its data users, different visuals will be suitable. It might be ideal to have a pullquote highlighting 'Revenue decreased xx%' to promote the overall movement, and have the third visualisation to show more detail. There's always some compromise necessary, however this version of the chart shows the key data clearly, in a format that data users can quickly absorb and understand.
+This project demonstrates that there is no single 'correct' chart. The best visual depends on **what the organisation wants to communicate**.
+
+In practice, a strong approach might include:
+* A headline or pull-quote summarising the overall change (e.g. 'Revenue fell by X%')
+* A supporting visual like the final chart to explain why the change happened
+
+This exercise shows my ability to:
+* Critically assess existing data visualisations
+* Identify where design choices are 
+* Select and justify alternatives based on audience needs
+* Communicate complex financial information clearly and efficiently
+
+It also highlights an important principle: good data visualisation is about decision-making, not decoration.
