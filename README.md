@@ -107,7 +107,7 @@ In practice, a strong approach might include, depending on the medium of commuic
 * A headline or pull-quote summarising the overall change (e.g. 'Revenue fell by X% from $x to $y')
 * A supporting visual like the final chart to explain why the change happened
 
-This exercise shows my ability to:
+This short project shows my ability to:
 * Critically assess existing data visualisations
 * Select and justify alternatives based on audience needs
 * Communicate complex financial information clearly and efficiently
