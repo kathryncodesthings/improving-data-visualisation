@@ -103,14 +103,13 @@ If this visual was being used in a presentation, I'd consider highlighting adver
 ## Conclusions
 This project demonstrates that there is no single 'correct' chart. The best visual depends on **what the organisation wants to communicate**.
 
-In practice, a strong approach might include:
-* A headline or pull-quote summarising the overall change (e.g. 'Revenue fell by X%')
+In practice, a strong approach might include, depending on the medium of commuication and the intended audience:
+* A headline or pull-quote summarising the overall change (e.g. 'Revenue fell by X% from $x to $y')
 * A supporting visual like the final chart to explain why the change happened
 
 This exercise shows my ability to:
 * Critically assess existing data visualisations
-* Identify where design choices are 
 * Select and justify alternatives based on audience needs
 * Communicate complex financial information clearly and efficiently
 
-It also highlights an important principle: good data visualisation is about decision-making, not decoration.
+It also highlights an important principle: good data visualisation for businesses is about supporting informed decision-making, not decoration.
