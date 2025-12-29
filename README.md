@@ -10,7 +10,7 @@ Where relevant, I include links to the full analysis and code.
 
 Skills demonstrated: data visualisation; analytical judgement; communicating insights to non-technical audiences; translating complex data into clear narratives.
 
-![Bar chart showing revenue sources for the Canadian National Broadcasting Corporation for two years](https://github.com/kathryncodesthings/improving-data-visualisation/blob/main/original%20to%20improved.png)
+![Bar chart showing revenue sources for the Canadian National Broadcasting Corporation for two years](https://github.com/kathryncodesthings/improving-data-visualisation/blob/main/img/original%20to%20improved.png)
 
 ### Business question
 
@@ -23,7 +23,7 @@ This is a common problem across many sectors, not just higher education.
 
 As I can't share internal data from my role, I used a publicly available example showing revenue sources for CBC-Radio Canada across two years, and demonstrated how I would improve the visual communication.
 
-![Bar chart showing revenue sources for CBC-Radio Canada for two years](https://github.com/kathryncodesthings/improving-data-visualisation/blob/main/original.png)
+![Bar chart showing revenue sources for CBC-Radio Canada for two years](https://github.com/kathryncodesthings/improving-data-visualisation/blob/main/img/original.png)
 
 > Source: CBC-Radio Canada 2018-2019 Annual Report ([PDF](https://site-cbc.radio-canada.ca/documents/impact-and-accountability/finances/2018-2019-annual-report.pdf)), page 39
 
@@ -47,7 +47,7 @@ Overall, the chart demands too much effort from the reader and risks communicati
 
 ### Revision 1: Stacked bar chart
 
-![Bar chart showing revenue sources for the Canadian National Broadcasting Corporation for two years](https://github.com/kathryncodesthings/improving-data-visualisation/blob/main/Improved%20viz%201.png)
+![Bar chart showing revenue sources for the Canadian National Broadcasting Corporation for two years](https://github.com/kathryncodesthings/improving-data-visualisation/blob/main/img/Improved%20viz%201.png)
 
 I recreated the chart in Power BI, focusing on clarity and reducing ambiguity.
 
@@ -67,7 +67,7 @@ While these issues could be partially mitigated, I decided to explore a differen
 
 ### Revision 2: Slope graph
 
-![Bar chart showing revenue sources for the Canadian National Broadcasting Corporation for two years](https://github.com/kathryncodesthings/improving-data-visualisation/blob/main/Improved%20viz%202.png)
+![Bar chart showing revenue sources for the Canadian National Broadcasting Corporation for two years](https://github.com/kathryncodesthings/improving-data-visualisation/blob/main/img/Improved%20viz%202.png)
 
 This version was built using Flourish and focuses explicitly on change over time.
 
@@ -80,7 +80,7 @@ Although slope graphs are powerful in the right context, this dataset isn’t we
 
 ### Revision 3: horizontal clustered bar chart
 
-![Bar chart showing revenue sources for the Canadian National Broadcasting Corporation for two years](https://github.com/kathryncodesthings/improving-data-visualisation/blob/main/Improved%20viz%203.png)
+![Bar chart showing revenue sources for the Canadian National Broadcasting Corporation for two years](https://github.com/kathryncodesthings/improving-data-visualisation/blob/main/img/Improved%20viz%203.png)
 
 This was also created in Flourish and is my preferred solution.
 
