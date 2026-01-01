@@ -111,5 +111,3 @@ This short project shows my ability to:
 * Critically assess existing data visualisations
 * Select and justify alternatives based on audience needs
 * Communicate complex financial information clearly and efficiently
-
-It also highlights an important principle: good data visualisation for businesses is about supporting informed decision-making, not decoration.
